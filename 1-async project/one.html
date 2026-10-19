@@ -20,8 +20,21 @@
     const sayAsync = function(){
         console.log('async');
     }
-    
+    setTimeout(sayAsync,2000)// reference
 
+    const changeText = function(){document.querySelector('h1').innerHTML = 'javascript'}
+    const change = setTimeout(changeText,2000)
+
+   
+    // what if we want to stop this change from happening
+    document.querySelector('#stop').addEventListener('click', function(){
+        clearTimeout(change)
+        console.log("stopped")
+
+    })
+
+
+    
     
 </script>
 
